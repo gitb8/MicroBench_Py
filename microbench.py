@@ -5,7 +5,7 @@ RUNS = 65536
 
 def func1(): pass       # demo function
 
-def func1(): pass       # demo function
+def func2(): pass       # demo function
 
 # bench setup
 
