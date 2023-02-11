@@ -1,7 +1,7 @@
 import time
 
 # set run repetitions
-RUNS = 65536
+RUNS: int = 65536
 
 def func1(): pass       # demo function
 
@@ -9,11 +9,11 @@ def func2(): pass       # demo function
 
 # bench setup
 
-a = 0
+a: int = 0
 
 # /bench setup
 
-start = time.perf_counter_ns()
+start: int = time.perf_counter_ns()
 for run in range(RUNS):
     # 1st run
 
@@ -25,8 +25,8 @@ for run in range(RUNS):
     # func2()     # reverse test
 
     # /1st run
-end = time.perf_counter_ns()
-first = float(end - start)
+end: int = time.perf_counter_ns()
+first: float = float(end - start)
 
 # reset bench
 
@@ -47,7 +47,7 @@ for run in range(RUNS):
 
     # /2nd run
 end = time.perf_counter_ns()
-second = float(end - start)
+second: float = float(end - start)
 
 # print result nanoseconds
 # print("1st run: ", first / float(RUNS), " ns", )
